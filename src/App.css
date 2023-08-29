@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -35,4 +37,79 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+
+.item.folder {
+  cursor: pointer;
+}
+
+.icon svg {
+  height: 40px;
+  width: 40px;
+}
+
+.item-name {
+  
+}
+
+.items-container {
+  margin-left: 20px;
+  border-left: 2px solid burlywood;
+  padding-left: 10px;
+}
+
+.item-name {
+  flex: 1 0 0;
+}
+
+.add-item-container {
+  display: none;
+  gap: 12px;
+  justify-content: space-evenly;
+}
+
+.item:hover .add-item-container {
+  display: flex;
+}
+
+.add-item-container p {
+  display: flex;
+  align-items: center;
+  gap: 5;
+}
+
+.add-item-container img {
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+
+input, input:focus {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+  z-index: -1;
+}
+
+.item-name.edit, .item-name.edit:focus {
+  z-index: 0;
+}
+
+.input-box-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-box-container input {
+  padding-left: 10px;
 }
